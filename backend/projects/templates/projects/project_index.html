@@ -1,0 +1,77 @@
+{% extends "projects/base.html" %}
+{% load static %}
+
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{%static 'projects.css'%}">
+{%endblock%} 
+ 
+{% block body %}
+    <div class="front-page background">
+        <h1 class="title">Projects</h1>
+        <img src="{% static 'roomback.png' %}">
+    </div>
+   
+    <div class="content">
+        <p class="menu-pages">Menu</p>
+        <div class="content-menu">
+            {% for project in projects %}
+                <div class="menu">
+                    <a href="#{{project.title}}" class="links">{{project.title}}</a>
+                </div>
+            {%endfor%}
+        </div>
+        {% for project in projects %}
+                <div class="content">
+                    <h2 class="title color" id="{{project.title}}">{{ project.title }}</h2>
+                    <div class="container">
+                        {% if project.images.all %}
+                            <div class="carousel-view">
+                                <button id="previous-image" class="previous-image"></button>
+                                <div id="list" class="list">
+                                    {% for image in project.images.all %}
+                                        <img src="{{ image.image.url }}" alt="{{ project.title }} image" id="image" class="item" /> 
+                                    {% endfor %}
+                                </div>
+                                <button id="next-image" class="next-image"></button>
+                            </div>
+                        {% endif %}
+                        <div class="description">
+                            <p>{{ project.description }}</p>
+                        </div>
+                    </div>
+                    <div class="technology_images">
+                        <h4 class="color size">Technologies used</h4>
+                        {% if project.technology_images.all %}
+                            <div>
+                                {% for tech_image in project.technology_images.all %}
+                                    <img src="{{ tech_image.technology_image.url }}" alt="{{ project.title }} technology image">
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+        {% endfor %}
+        <div class="buttons">
+            <form action="https://github.com/JessiP23/Calculator" target="_blank">
+                <input type="submit" value="Calculator Code" />
+            </form>
+            <form action="https://github.com/JessiP23/prework-study-guide" target="_blank">
+                <input type="submit" value="Study-Guide Code" />
+            </form>
+        </div>
+    </div>
+    <script>
+        const previousImage = document.getElementById('previous-image');
+        const nextImage = document.getElementById('next-image');
+        const listOfImages = document.getElementById('list');
+        const widthOfImage = 3;
+        const padding = 100;
+
+        previousImage.addEventListener('click', () => {
+            listOfImages.scrollLeft -= (widthOfImage + padding);
+        });
+        nextImage.addEventListener('click', () => {
+            listOfImages.scrollLeft += (widthOfImage + padding);
+        });
+    </script>
+{% endblock %}

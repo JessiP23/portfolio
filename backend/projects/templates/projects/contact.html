@@ -1,0 +1,10 @@
+{%extends "projects/base.html"%}
+{%block body%}
+
+<form method="post" action="{% url 'contact_view' %}">
+    <h1>Contact Me</h1>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+{%endblock%}
