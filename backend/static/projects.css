@@ -1,3 +1,4 @@
+/*General styling*/
 body{
     background-color: rgba(65, 105, 225, 1);
     display: flex; 
@@ -7,7 +8,7 @@ body{
     text-align: center;
     height: 100%;
     margin: 0;
-}
+} 
 
 .menu{
     font-size: 30px;
@@ -20,7 +21,7 @@ div a{
     color: white;
 }
 
-
+/*Description styling*/
 .front-page h1 {
     position: absolute;
     top: 50%;
@@ -46,6 +47,7 @@ div a{
     margin-bottom: 20%;
 }
 
+/*Description styling*/
 .description{
     background-color: aqua;
     margin-top: 5%;
@@ -53,6 +55,7 @@ div a{
     font-size: 25px;
 }
 
+/*Images Technologies styling*/
 .technology_images img{
     width: 70px;
     height: 70px;
@@ -73,18 +76,12 @@ div a{
     margin-top: 10%;
 }
 
+/*Carousel backgroud*/
 .carousel-view{
     overflow: hidden;
     position: relative;
     background-color: rgb(24, 34, 65);
     width: 100%;
-}
-
-button{
-    width: 40px;
-    height: 40px;
-    background-color: pink;
-    border: none;
 }
 
 .list{
@@ -113,7 +110,7 @@ button{
     align-items: center;
 }
 
-
+/*Scroll Button images*/
 #previous-image, #next-image{
     position: relative;
     top: 50%;
@@ -141,10 +138,25 @@ button{
     scrollbar-width: none;
 }
 
+/*buttons styling*/
 .buttons{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+ 
+.buttons button{
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover{
+    background-color: #2980b9;
 }
 
 form{
@@ -163,6 +175,14 @@ form input{
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3 ease;
+}
+ 
+button{
+    background-color: #3498db;
+}
+
+.buttonPortfolio{
+    background-color: #3498db;
 }
 
 form input:hover{

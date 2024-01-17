@@ -1,4 +1,5 @@
-body{
+/*General styling*/
+body{ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +7,13 @@ body{
     text-align: center;
     background-color: #141414;
     color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
+/*Carousel background styling*/
 .carousel-container {
     display: flex;
     align-items: center;
@@ -27,7 +33,16 @@ h2{
     font-size: 30px;
 }
 
-.description p{
+/*buttons properties*/
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.description p{ 
     font-size: 30px;
     width: 80%;
     margin: 0 auto;
@@ -46,19 +61,22 @@ h2{
     height: auto;
 }
 
-.carousel-button {
-    font-size: 24px;
-    background-color: #382f2f;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 15px;
-    color: #ffffff;
-}
 
 form {
     margin-top: 20px;
     text-align: center;
+}
+
+/*buttons styling*/
+.button-render, form input[type="submit"], .carousel-button{
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    background-color: #382f2f;
+    vertical-align: middle;
 }
 
 input{
@@ -69,4 +87,22 @@ input{
 
 input:hover{
     background-color: #ffcc00;
+}
+
+input[type="submit"] {
+    width: 120%;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+input:hover, .button-render:hover, .carousel-button:hover {
+    background-color: #ffcc00;
+}
+
+/*media responsive*/
+@media only screen and (max-width: 768px){
+    .buttons{
+        width: 90%;
+    }
 }

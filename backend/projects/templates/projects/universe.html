@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile</title>
         <link rel="stylesheet" type="text/css" href="{% static 'universe.css' %}" >
-    </head>  
+    </head>   
     <body>
         <h1 class="title">Universe app</h1>
         <div class="description">
@@ -22,9 +22,12 @@
             </div>    
             <button class="carousel-button next" id="next-image">&#8658;</button>        
         </div>
-        <form action="https://github.com/JessiP23/Universe3d" target="_blank">
-            <input type="submit" value="Solar System Code">
-        </form>  
+        <div class="buttons">
+            <form action="https://github.com/JessiP23/Universe3d" target="_blank">
+                <input type="submit" value="Solar System Code" class="button-render">
+            </form>  
+            <button id="render-room" class="button-render">My Portfolio</button>
+        </div>
         <script>
             const previousImage = document.getElementById('previous-image');
             const nextImage = document.getElementById('next-image');
@@ -34,9 +37,14 @@
     
             previousImage.addEventListener('click', () => {
                 listOfImages.scrollLeft -= (widthOfImage + padding);
-            });
+            }); 
             nextImage.addEventListener('click', () => {
                 listOfImages.scrollLeft += (widthOfImage + padding);
+            });
+
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/";
             });
         </script>     
     </body>

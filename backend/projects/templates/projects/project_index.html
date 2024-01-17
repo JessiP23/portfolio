@@ -4,12 +4,12 @@
 {%block link%}
 <link rel="stylesheet" type="text/css" href="{%static 'projects.css'%}">
 {%endblock%} 
- 
+   
 {% block body %}
     <div class="front-page background">
         <h1 class="title">Projects</h1>
         <img src="{% static 'roomback.png' %}">
-    </div>
+    </div> 
    
     <div class="content">
         <p class="menu-pages">Menu</p>
@@ -51,12 +51,15 @@
                     </div>
                 </div>
         {% endfor %}
-        <div class="buttons">
+        <div class="buttons"> 
             <form action="https://github.com/JessiP23/Calculator" target="_blank">
                 <input type="submit" value="Calculator Code" />
             </form>
             <form action="https://github.com/JessiP23/prework-study-guide" target="_blank">
                 <input type="submit" value="Study-Guide Code" />
+            </form>
+            <form action="http://localhost:3000">
+                <input type="submit" value="My Portfolio" />
             </form>
         </div>
     </div>
@@ -67,11 +70,21 @@
         const widthOfImage = 3;
         const padding = 100;
 
+        //Event listener to scroll to the previous image
         previousImage.addEventListener('click', () => {
+            //subtract the image widht plus the padding
             listOfImages.scrollLeft -= (widthOfImage + padding);
         });
+
+        //Event Listener to scroll the next image
         nextImage.addEventListener('click', () => {
             listOfImages.scrollLeft += (widthOfImage + padding);
+        });
+    
+        //Event Listener to render the room
+        const renderRoom = document.getElementById('render-room');
+        renderRoom.addEventListener('click', () => {
+            window.location.href = "http://localhost:3000/";
         });
     </script>
 {% endblock %}

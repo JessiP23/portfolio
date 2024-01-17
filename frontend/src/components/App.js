@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
+
 const Projects = () => {
     const [projects, setProjects] = useState(null);
 
     useEffect(() => {
         const fecthData = async () => {
+            //get project_index endpoint
             try{
                 const response = await fecthData('/project_index');
                 if(!response.ok){
@@ -15,13 +17,15 @@ const Projects = () => {
                 console.log("Error fetching about me data: ", error);
             }
         };
+        //call asynchronous function
         fecthData();
     }, []);
 
     if(!projects){
+        //if projects is false or null
         return <div>Loading ...</div>
     }
-
+    //if projects is not null
     return (
         <div>
             <h1> {projects.title}</h1>

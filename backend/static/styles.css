@@ -1,3 +1,4 @@
+/*General styling*/
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     position: relative;
 } 
 
+/*Header styling*/
 .menu {
     font-size: 20px;
     position: fixed;
@@ -21,6 +23,7 @@ body {
     z-index: 1;
 }
 
+/*footer styling and positioning*/
 footer {
     text-align: center;
     color: #fff;
@@ -35,6 +38,7 @@ footer {
     color: white;
 }
 
+/*hover over email in footer*/
 .email:hover{
     color: #236b6b;
 }
@@ -49,6 +53,7 @@ footer {
     overflow: hidden;
 }
 
+/*h1 styling*/
 .front-page h1 {
     position: absolute;
     top: 50%;
@@ -60,8 +65,9 @@ footer {
     z-index: 2;
 }
 
+/*background image*/
 .front-page img {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     filter: brightness(70%);
@@ -78,6 +84,7 @@ footer {
     height: 100%;
 }
 
+/*summary styling*/
 .summary {
     padding: 20px;
     width: 70%;
@@ -100,6 +107,7 @@ p {
     margin-bottom: 20px;
 }
 
+/*Technologis images learn styling*/
 .technologies_learn{
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -112,7 +120,7 @@ p {
     margin-bottom: 20%;
 }
 
-
+/*technologies images*/
 .technologies{
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -161,3 +169,4 @@ a {
     color: #007BFF;
     text-decoration: none;
 }
+ 

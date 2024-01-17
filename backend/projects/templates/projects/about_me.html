@@ -7,13 +7,14 @@
         <title>Profile</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" >
-    </head>  
+    </head>   
     <body>
         <div class="container-page">
             <header class="menu">
                 <a href="#myself">Myself</a>
                 <a href="#accomplishment">Accomplishment</a>
                 <a href="#technologies">Technologies</a>
+                <a id="render-room">My Portfolio</a>
             </header>
             <div class="front-page">
                 <h1>Jessi Joandy Pavia Martinez</h1>
@@ -117,21 +118,30 @@
                 <a href="mailto:jessi316866@gmail.com" class="email">jessi316866@gmail.com</a>
             </footer>
         </div>
-        <script>
+        <script> 
             document.addEventListener("DOMContentLoaded", function(){
+                //elements with class names
                 const myself = document.querySelector('.myself');
                 const accomplishment = document.querySelector('.accomplishment');
                 const technology = document.querySelector('.technologies');
                 const technology_learn = document.querySelector('.technologies_learn');
             
+                //callback function when 0 to 50% of the element visible
                 const observerOptions = { threshold: [0, 0.5] };
-            
+                
+                const renderRoom = document.getElementById('render-room');
+                renderRoom.addEventListener('click', () => {
+                    window.location.href = "http://localhost:3000/";
+                });
+
                 const fadingSection = (section) => {
                     const observer = new IntersectionObserver((entries) => {
                         entries.forEach((entry) => {
                             if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                                //50%
                                 section.style.opacity = 1;
                             } else {
+                                //0%
                                 section.style.opacity = 0;
                             }
                         });
