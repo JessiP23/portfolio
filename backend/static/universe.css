@@ -1,0 +1,108 @@
+/*General styling*/
+body{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/*Carousel background styling*/
+.carousel-container {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    text-align: center;
+    color: #ffcc00;
+}
+
+h2{
+    font-size: 30px;
+}
+
+/*buttons properties*/
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.description p{ 
+    font-size: 30px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.list {
+    display: flex;
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+}
+
+.image {
+    max-width: 500px; 
+    height: auto;
+}
+
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*buttons styling*/
+.button-render, form input[type="submit"], .carousel-button{
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    background-color: #382f2f;
+    vertical-align: middle;
+}
+
+input{
+    width: 120%;
+    height: 40px;
+    font-size: 20px;
+}
+
+input:hover{
+    background-color: #ffcc00;
+}
+
+input[type="submit"] {
+    width: 120%;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+input:hover, .button-render:hover, .carousel-button:hover {
+    background-color: #ffcc00;
+}
+
+/*media responsive*/
+@media only screen and (max-width: 768px){
+    .buttons{
+        width: 90%;
+    }
+}

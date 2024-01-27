@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>   
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'quiz_app.css' %}" >
+    </head>  
+    <body> 
+        <h1 class="title">My Quiz App</h1>
+        <div class="description">
+            <p>This is an interactive quiz application by using React.
+                This app provides a dynamic experience. I have incorporated dynamic animations
+                to enhance user's attention. This test contains two sections, Mathematics and Spanish.
+                This quiz tests general knowledge in certain subjects.</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button prev" id="previous-image">&#8656;</button>
+            <div class="list" id="list">
+                <img class="image" id="image" src="/media/project_images/myApp1.jpg" alt="universe front">
+                <img class="image" id="image" src="/media/project_images/myApp2.jpg" alt="universe top">
+                <img class="image" id="image" src="/media/project_images/myApp3.jpg" alt="planet ring">
+            </div>    
+            <button class="carousel-button next" id="next-image">&#8658;</button>        
+        </div> 
+        <div class="buttons">
+            <form action="https://github.com/JessiP23/Universe3d" target="_blank">
+                <input type="submit" value="Quiz App Code" class="button-render">
+            </form>  
+            <button id="render-room" class="button-render">My Portfolio</button>
+        </div>
+        <script>
+            const previousImage = document.getElementById('previous-image');
+            const nextImage = document.getElementById('next-image');
+            const listOfImages = document.getElementById('list');
+            const widthOfImage = 3;
+            const padding = 1000;
+    
+            previousImage.addEventListener('click', () => {
+                listOfImages.scrollLeft -= (widthOfImage + padding);
+            });
+            nextImage.addEventListener('click', () => {
+                listOfImages.scrollLeft += (widthOfImage + padding);
+            });
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/";
+            });
+        </script>     
+    </body>
+</html>

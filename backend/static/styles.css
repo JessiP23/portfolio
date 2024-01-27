@@ -1,0 +1,172 @@
+/*General styling*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2f4f4f;
+}
+
+.container-page {
+    position: relative;
+} 
+
+/*Header styling*/
+.menu {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 1;
+}
+
+/*footer styling and positioning*/
+footer {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #1a3e3e;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.email{
+    color: white;
+}
+
+/*hover over email in footer*/
+.email:hover{
+    color: #236b6b;
+}
+
+.contact_information{
+    font-weight: bold;
+}
+
+.front-page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/*h1 styling*/
+.front-page h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    z-index: 2;
+}
+
+/*background image*/
+.front-page img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: opacity 0.5s ease;
+}
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+/*summary styling*/
+.summary {
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: opacity 0.5s ease;
+}
+
+.myself, .accomplishment, .contact {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 2s ease;
+    width: 100%;
+    padding: 5%;
+    margin: 10% auto;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/*Technologis images learn styling*/
+.technologies_learn{
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: opacity 2s ease;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20%;
+}
+
+/*technologies images*/
+.technologies{
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: opacity 2s ease;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10%;
+}
+
+.images-displayed{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-container{
+    flex-basis: calc(25% - 10px );
+    margin: 0 0 10px 0;
+}
+
+.title_section{
+    text-align: center;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.image-container img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+ 

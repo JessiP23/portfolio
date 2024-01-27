@@ -1,0 +1,159 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" >
+    </head>   
+    <body>
+        <div class="container-page">
+            <header class="menu">
+                <a href="#myself">Myself</a>
+                <a href="#accomplishment">Accomplishment</a>
+                <a href="#technologies">Technologies</a>
+                <a id="render-room">My Portfolio</a>
+            </header>
+            <div class="front-page">
+                <h1>Jessi Joandy Pavia Martinez</h1>
+                <img src="{% static 'background_image.png' %}">
+            </div>
+            <div class="root"> 
+                <div class="summary">
+                    <div class="myself" id="myself">
+                        <p class="title_section">About Me</p>
+                        <p>I am a highly motivated and accomplished individual with a passion for computer science and mathematics. My journey began with notable achievements, including competing in Mexico's National Olympiads in 2017 and achieving recognition as the best computer science/math tutor of the year at PCCC in 2022.</p>
+                        <p>My dedication to excellence is further demonstrated by my participation in prestigious competitions such as the Putnam competition, where I ranked in the top 500 in 2022. As the treasurer of the computer science club at my college, I successfully led a team in creating an innovative app focused on space, benefiting 400 students across the campus.</p>
+                        <p>My coding journey was inspired by my father, who, with limited knowledge, created programming videos on YouTube. This inspiration fueled my commitment to learning and growing in the field. I honed my skills through programming courses from renowned institutions like Harvard and CourseCareers, preparing myself for a career in technology.</p>
+                        <p> My practical experience was enriched through participation in HackPrinceton 2022/2023, where I thrived in a fast-paced environment, delivering impactful projects within tight timelines. I am driven by a passion for continuous learning, problem-solving, and contributing meaningfully to the world of technology.</p>
+                        <p>As I reflect on my achievements and experiences, my long-term goal crystallizes around a deep passion for leveraging technology to benefit the Hispanic community. Looking ahead, I am driven by the vision of creating my own startup, utilizing artificial intelligence to address challenges and empower individuals within the Hispanic community. I envision developing innovative solutions that contribute to education, healthcare, or other areas where technology can make a tangible difference. This goal not only fuels my entrepreneurial spirit but also underscores my commitment to creating positive social impact through technology.</p>
+                        <p>Looking forward, I am excited to leverage my skills and experiences to tackle new challenges and make a positive impact in the ever-evolving landscape of technology.</p>
+                    </div>
+                    <div class="accomplishment" id="accomplishment">
+                        <p class="title_section">Accomplishments</p>
+                        <ul>
+                            <li>Mexico National Olympiads 2017</li>
+                            <li>Math / Computer Science Tutor of the year 2022 at PCCC</li>
+                            <li>Best Club Founded (computer science) in 2022. (treasurer)</li>
+                            <li>Rutgers Math Department Scholarship</li>
+                            <li>HackPrinceton 2022 Best Design</li>
+                            <li></li>
+                        </ul>
+                    </div> 
+                    <div class="technologies" id="technologies">
+                        <p class="title_section">Experience with Technologies</p>
+                        <div class="images-displayed">
+                            <div class="image-container">
+                                <img src="{% static 'css.png' %}" alt="CSS" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'django.png' %}" alt="django" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'go.png' %}" alt="Go" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'html.png' %}" alt="HTML" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'javascript.png' %}" alt="JavaScript" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'python.png' %}" alt="Python" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'react.png' %}" alt="React" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'threejs.png' %}" alt="Three.js" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'vscode.png' %}" alt="VS Code" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'nodejs.png' %}" alt="NOdeJS" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'github.png' %}" alt="GitHub" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technologies_learn">
+                        <p class="title_section">Eager to Learn</p>
+                        <div class="images-displayed">
+                            <div class="image-container">
+                                <img src="{% static 'tensor.png' %}" alt="TensorFlow" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'rubyonrails.png' %}" alt="Ruby On Rails" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'pandas.png' %}" alt="Pandas" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'mongo.png' %}" alt="MongoDB" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'microsoftazure.png' %}" alt="Microsoft Azure" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'flask.png' %}" alt="Flask" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'angular.png' %}" alt="Angular" >
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'aws.png' %}" alt="Amazon Web Services" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>Copyright    2023 - 2024 | Author: Jessi Joandy Pavia Martinez</p>
+                <p class="contact_information">Contact Information</p>
+                <a href="mailto:jessi316866@gmail.com" class="email">jessi316866@gmail.com</a>
+            </footer>
+        </div>
+        <script> 
+            document.addEventListener("DOMContentLoaded", function(){
+                //elements with class names
+                const myself = document.querySelector('.myself');
+                const accomplishment = document.querySelector('.accomplishment');
+                const technology = document.querySelector('.technologies');
+                const technology_learn = document.querySelector('.technologies_learn');
+            
+                //callback function when 0 to 50% of the element visible
+                const observerOptions = { threshold: [0, 0.5] };
+                
+                const renderRoom = document.getElementById('render-room');
+                renderRoom.addEventListener('click', () => {
+                    window.location.href = "http://localhost:3000/";
+                });
+
+                const fadingSection = (section) => {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                                //50%
+                                section.style.opacity = 1;
+                            } else {
+                                //0%
+                                section.style.opacity = 0;
+                            }
+                        });
+                    }, observerOptions);
+                    observer.observe(section);
+                };
+            
+                fadingSection(myself);
+                fadingSection(accomplishment);
+                fadingSection(technology);
+                fadingSection(technology_learn);
+            });            
+        </script>
+    </body>
+</html>

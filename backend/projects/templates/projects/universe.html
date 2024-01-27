@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'universe.css' %}" >
+    </head>   
+    <body>
+        <h1 class="title">Universe app</h1>
+        <div class="description">
+            <p>Hi, Thank you for coming to see my little and magnificient universe!. Explore the orbit of our solar system's planets, each one pretty detailed. In this 3d model, I could display rings of Jupiter, Neptune and Uranus. This project enhanced my creativity and problem-solving skills. Every aspect of this universe has designed to deliver a joyful experience. I have dedicated time by adding the rings and textures to show a realistic perspective of our solar system. This app shows my passion for details, which offer a unique 3d exploration of the solar system. </p>
+        </div> 
+        <div class="carousel-container">
+            <button class="carousel-button prev" id="previous-image">&#8656;</button>
+            <div class="list" id="list">
+                <img class="image" id="image" src="{% static 'universe.png' %}" alt="universe front">
+                <img class="image" id="image" src="{% static 'universe1.png' %}" alt="universe top">
+                <img class="image" id="image" src="{% static 'universe2.png' %}" alt="planet ring">
+            </div>    
+            <button class="carousel-button next" id="next-image">&#8658;</button>        
+        </div>
+        <div class="buttons">
+            <form action="https://github.com/JessiP23/Universe3d" target="_blank">
+                <input type="submit" value="Solar System Code" class="button-render">
+            </form>  
+            <button id="render-room" class="button-render">My Portfolio</button>
+        </div>
+        <script>
+            const previousImage = document.getElementById('previous-image');
+            const nextImage = document.getElementById('next-image');
+            const listOfImages = document.getElementById('list');
+            const widthOfImage = 3;
+            const padding = 500;
+    
+            previousImage.addEventListener('click', () => {
+                listOfImages.scrollLeft -= (widthOfImage + padding);
+            }); 
+            nextImage.addEventListener('click', () => {
+                listOfImages.scrollLeft += (widthOfImage + padding);
+            });
+
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/";
+            });
+        </script>     
+    </body>
+</html>
