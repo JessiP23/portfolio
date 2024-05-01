@@ -235,7 +235,7 @@ const ThreeDRoom = () => {
         const paintingClicked = intersects[0].object;
         const BASE_URL = 'http://localhost:8000';
         if(paintingClicked === painting1){
-          const url = BASE_URL;
+          const url = BASE_URL; 
           window.location.href = url;
         } else if (paintingClicked === painting2){
           const url = BASE_URL + '/universe_app'

@@ -2,6 +2,16 @@ import React from "react";
 
 const InitialPage = ({ showRoom }) => {
 
+    const containerStyle = {
+        maxWidth: '600px',
+        margin: '0 auto',
+        padding: '20px',
+        border: '2px solid #ddd',
+        borderRadius: '10px',
+        background: 'linear-gradient(to bottom, #ffffff, #f5f5f5)',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    };
+
     const pageStyling = {
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
         backgroundColor: '#f5f5f5',
@@ -11,6 +21,7 @@ const InitialPage = ({ showRoom }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        fontFamily: 'Roboto, sans-serif',
     };
 
     const styleButton = {
@@ -25,7 +36,7 @@ const InitialPage = ({ showRoom }) => {
 
     const styleH1 ={
         marginBottom: '4%',
-        fontSize: '3vw',
+        fontSize: '3vw', 
     }
 
     const styleDiv = {
@@ -64,23 +75,27 @@ const InitialPage = ({ showRoom }) => {
     return (
         //My Portfolio page Content
         <div style={pageStyling}>
-            <h1 style={styleH1}>Welcome to my Portfolio</h1>
-            <div style={styleDiv}>
-                <p style={styleP}>This is a 3D portfolio that display some objects inside of a room. Each specific object redirects to a specific part of my portfolio. Here are the objects and the part of my portfolio.</p>
-                <ul style={styleUl}>
-                    <li style={styleLi}>Light Bulb on roof = My Summary</li>
-                    <li style={styleLi}>Paintings = Apps</li>
-                    <h6 style={styleH6}>Note: Click on each object to render the specific part of my portfolio.</h6>
-                    <h6 style={styleH6}>Note: Hit the arrow keys for camera movement.</h6>
-                </ul>
-                <p>Have Fun!!!</p>
-            </div>
-            <button onClick={showRoom} style={styleButton}>
-                Let's Go
-            </button>
-            <div id="resume">
-                <button onClick={resumeDownload} style={styleButton}>View my Resume</button>
-            </div>
+            <div style={containerStyle}>
+                <h1 style={styleH1}>Welcome to my Portfolio</h1>
+                <div style={styleDiv}>
+                    <p style={styleP}>This is a 3D portfolio that display some objects inside of a room. Each specific object redirects to a specific part of my portfolio. Here are the objects and the part of my portfolio.</p>
+                    <ul style={styleUl}>
+                        <li style={styleLi}>Light Bulb on roof = My Summary</li>
+                        <img src="./images/neon_light.png" alt="Neon Light Demonstration" style={{ width: '100%', maxWidth: '200px', margin: '20px auto' }} />
+                        <li style={styleLi}>Paintings = Apps</li>
+                        <img src="./images/painting_click.png" alt="Neon Light Demonstration" style={{ width: '100%', maxWidth: '200px', margin: '20px auto' }} />
+                        <h6 style={styleH6}>Note: Click on each object to render the specific part of my portfolio.</h6>
+                        <h6 style={styleH6}>Note: Hit the arrow keys for camera movement.</h6>
+                    </ul>
+                    <p>Have Fun!!!</p>
+                </div>
+                <button onClick={showRoom} style={styleButton}>
+                    Let's Go
+                </button>
+                <div id="resume">
+                    <button onClick={resumeDownload} style={styleButton}>View my Resume</button>
+                </div> 
+            </div> 
         </div>
     );
 };
