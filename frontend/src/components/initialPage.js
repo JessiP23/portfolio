@@ -1,6 +1,6 @@
 import React from "react";
 
-const InitialPage = ({ showRoom }) => {
+const InitialPage = () => {
 
     const containerStyle = {
         maxWidth: '600px',
@@ -15,7 +15,7 @@ const InitialPage = ({ showRoom }) => {
     const pageStyling = {
         boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
         backgroundColor: '#f5f5f5',
-        height: '100vh', 
+        height: 'auto', 
         width: '100vw',
         textAlign: 'center',
         display: 'flex',
@@ -69,12 +69,17 @@ const InitialPage = ({ showRoom }) => {
     const resumeDownload = () => {
         const resumePath = 'https://onedrive.live.com/embed?resid=F6DA5EC76559F59E%21361280&authkey=!AASqLTIRgIzhw0M&em=2';
         window.open(resumePath, '_blank');
-        
-    }
+    };
+
+
+    const takeToRoom = () => {
+        window.location.href = '/room';
+    };
+
 
     return (
         //My Portfolio page Content
-        <div style={pageStyling}>
+        <div style={pageStyling} className="page-container">
             <div style={containerStyle}>
                 <h1 style={styleH1}>Welcome to my Portfolio</h1>
                 <div style={styleDiv}>
@@ -89,7 +94,7 @@ const InitialPage = ({ showRoom }) => {
                     </ul>
                     <p>Have Fun!!!</p>
                 </div>
-                <button onClick={showRoom} style={styleButton}>
+                <button onClick={takeToRoom} style={styleButton}>
                     Let's Go
                 </button>
                 <div id="resume">

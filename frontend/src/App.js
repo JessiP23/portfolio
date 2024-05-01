@@ -1,26 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import InitialPage from "./components/initialPage";
 import ThreeDRoom from "./components/ThreeDRoom";
 
 function MyPortfolio() {
-  const [showThreeDRoom, setShowThreeDRoom] = useState(false);
-  
-  //function with showThreeDRoom true
-  const retrieveThreeDRoom = () => {
-    setShowThreeDRoom(true);
-  };
- 
-  //if true, send to ThreeDRoom, if not, send to InitialPage
   return (
-    <div className="App">
-      {showThreeDRoom ? (
-        <ThreeDRoom />
-      ) : (
-        <InitialPage showRoom = {retrieveThreeDRoom} />
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<InitialPage />} />
+        <Route path="/room" element={<ThreeDRoom />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default MyPortfolio;
-

@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo, useRef, useCallback} from "react";
 import * as THREE from "three";
-import "./App.css";
 //import 3d bookcase
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader';
 //mouse camera movement
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import "./App.css";
 
 const ThreeDRoom = () => {
   //empty array
