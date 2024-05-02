@@ -1,24 +1,24 @@
-*{
+.three-room *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+.three-room html, .three-room body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
   
-  body{
-    overflow: hidden;
-  }
+.three-room body{
+  overflow: hidden;
+}
   
-  .canvas-container{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+.three-room .myCanvas{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 

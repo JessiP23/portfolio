@@ -4,7 +4,7 @@ const InitialPage = () => {
 
     const containerStyle = {
         maxWidth: '600px',
-        margin: '0 auto',
+        margin: '20px auto',
         padding: '20px',
         border: '2px solid #ddd',
         borderRadius: '10px',
@@ -22,6 +22,7 @@ const InitialPage = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         fontFamily: 'Roboto, sans-serif',
+        backgroundImage: 'linear-gradient(to bottom, black, #f5f5f5)',
     };
 
     const styleButton = {
@@ -32,22 +33,28 @@ const InitialPage = () => {
         margin: '0 auto',
         borderRadius: '6px',
         transition: 'background-color 0.5s',
+        fontSize: '1.2rem',
+        display: 'block',
+        width: '200px',
+        height: '80px',
+        marginBottom: '1rem',
     };
 
     const styleH1 ={
-        marginBottom: '4%',
-        fontSize: '3vw', 
+        marginBottom: '2rem',
+        fontSize: '3rem',
+        textAlign: 'center' 
     }
 
     const styleDiv = {
         marginBottom: '4%',
-        fontSize: '1rem',
+        fontSize: '1.2rem',
     }
 
     const styleP = {
         maxWidth: '80%',
         margin: '0 auto',
-        marginBottom: '3%',
+        marginBottom: '1.5rem',
         fontSize: '1rem',
     }   
 

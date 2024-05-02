@@ -45,6 +45,12 @@ const ThreeDRoom = () => {
   spotLight.shadow.camera.near = 10;
   spotLight.shadow.camera.far = 800;
   scene.add(spotLight);
+
+  useEffect(() => {
+    if (canvasRef.current) {
+      canvasRef.current.classList.add('three-room');
+    }
+  }, []);
  
    //walls
    const textureLoader = new THREE.TextureLoader();
@@ -312,7 +318,11 @@ const ThreeDRoom = () => {
     };
   }, [renderer, scene, camera, checkBoundary, paintingClickable, painting1, painting2, painting3, neonBulb]);
 
-  return <div className="myCanvas" ref={canvasRef} tabIndex={0} ></div>;
+  return( 
+    <div className="three-room">
+      <div className="myCanvas" ref={canvasRef} tabIndex={0} ></div>
+    </div>
+  );
 }
 
 export default ThreeDRoom;
