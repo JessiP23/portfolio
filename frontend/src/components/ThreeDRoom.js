@@ -45,12 +45,6 @@ const ThreeDRoom = () => {
   spotLight.shadow.camera.near = 10;
   spotLight.shadow.camera.far = 800;
   scene.add(spotLight);
-
-  useEffect(() => {
-    if (canvasRef.current) {
-      canvasRef.current.classList.add('three-room');
-    }
-  }, []);
  
    //walls
    const textureLoader = new THREE.TextureLoader();
@@ -102,6 +96,7 @@ const ThreeDRoom = () => {
    const paintingTexture1 = paintingLoader.load('./images/calculator.png');
    const paintingTexture2 = paintingLoader.load('./images/universe.png');
    const paintingTexture3 = paintingLoader.load('./images/myApp1.jpg');
+   const paintingTexture4 = paintingLoader.load('./images/business_photo.png');
 
    //paintings positioned with different textures.
    const painting1 = useMemo(() => {
@@ -128,16 +123,28 @@ const ThreeDRoom = () => {
    //link painting3 to app's info
    paintingClickable.push(painting3);
 
+   const painting4 = useMemo(() => {
+    const paintingGeometry4 = new THREE.PlaneGeometry(90,90);
+    const paintingMaterial4 = new THREE.MeshPhongMaterial({ map: paintingTexture4, side: THREE.DoubleSide });
+    return new THREE.Mesh(paintingGeometry4, paintingMaterial4);
+    //link painting4 to app's info
+   }, [paintingTexture4]);
+
+   paintingClickable.push(painting4);
+
    painting1.position.set(259, 100, 100);
    painting2.position.set(-259, 100, 100);
    painting3.position.set(-259, 100, -100);
+   painting4.position.set(259, 100, -100);
    painting1.rotation.y = Math.PI/2;
    painting2.rotation.y = Math.PI / 2;
    painting3.rotation.y = Math.PI / 2;
+   painting4.rotation.y = Math.PI / 2;
 
    scene.add(painting1);
    scene.add(painting2);
    scene.add(painting3);
+   scene.add(painting4);
   
    //Reusable window function
    function windowPaintings(scene, width, height, depth, positions){
@@ -174,6 +181,7 @@ const ThreeDRoom = () => {
      {x: 290, y: 100, z: 100, rotation: -Math.PI /2},
      {x: -260, y: 100, z: 100, rotation: -Math.PI / 2},
      {x: -260, y: 100, z: -100, rotation: -Math.PI / 2},
+     {x: 290, y: 100, z: -100, rotation: -Math.PI / 2},
    ];
 
    windowPaintings(scene, windowWidth, windowHeight, windowDepth, windowPositions);
@@ -251,6 +259,9 @@ const ThreeDRoom = () => {
           window.location.href = url;
         } else if(paintingClicked === neonBulb){
           const url = BASE_URL + '/about_me';
+          window.location.href = url;
+        } else if (paintingClicked === painting4) {
+          const url = BASE_URL + '/business_application';
           window.location.href = url;
         }
       };  

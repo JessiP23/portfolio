@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'business.css' %}">
+</head> 
+<body> 
+    <h1 class="title">My Business Application</h1>
+    <div class="description">
+        <p>This is an interactive retail application developed by using Django as the main technology and other technologies such as HTML, CSS, JavaScript, Bootstrap, Google OAuth 2.0, Stripe, and Django Rest Framwork. You can enjoy of Hispanic Products listed by categories or all products in a single list. This integrates Stripe as the payment method after a user has decided its products to buy online.</p>
+    </div>
+    <div class="section home">
+        <img src="{% static 'business_photo.png' %}" alt="universe front">
+        <p>In the home page you can see images relevant to Hispanic countries, which are rotated by a carousel and its references at the bottom. The images are rotated each 4 seconds allowing an engaging experience to the user.</p>
+    </div>
+    <div class="section page">
+        <p>This option contains the Deals section for offers to the users and below is included the company's info, community, contact information, and STAY Connected.</p>
+        <img src="{% static 'business_photo1.png' %}" alt="universe front">
+    </div>
+    <div class="section profile">
+        <p>This is the User Update Profile section, where users can enter their billing and personal information, once you enter the data the information is displayed in the inputs. You can update as well your picture by adding any picture you want.</p>
+        <img src="{% static 'business_photo2.png' %}" alt="universe front">
+    </div>
+    <div class="section inside-options">
+        <p>This shows the Products section, where you can find all type of products we have available, the price, and our inventory available for customers. Also is added the Add to Cart feature as well as the Quantity.</p>
+        <img src="{% static 'business_photo3.png' %}" alt="universe front">
+    </div> 
+    <div class="section deals">
+        <p>This is the deals section, in here I have added a new feature. Once you scroll on it, the card is flipped 180 degrees, showing the card information and add to cart feature.</p>
+        <img src="{% static 'business_photo4.png' %}" alt="universe front">
+        <img src="{% static 'business_photo5.png' %}" alt="universe front">
+    </div>
+    <div class="buttons">
+        <form action="https://github.com/JessiP23/Universe3d" target="_blank">
+            <input type="submit" value="Quiz App Code" class="button-render">
+        </form>  
+        <button id="render-room" class="button-render">My Portfolio</button>
+    </div>    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var sections = document.querySelectorAll('.section');
+
+            window.addEventListener('scroll', function() {
+                sections.forEach(function(section) {
+                    if (isInViewport(section)) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+                var threshold = 0.5; 
+
+                return (
+                    rect.top >= 0 && rect.top <= viewportHeight * (1 - threshold) ||
+                    rect.bottom >= 0 && rect.bottom <= viewportHeight * threshold
+                );
+            }
+        });
+    </script>
+</body>
+</html>

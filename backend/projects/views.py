@@ -17,3 +17,6 @@ def universe_app(request):
 
 def quiz_app(request):
     return render(request, 'projects/quiz_app.html')
+
+def business_application(request): 
+    return render(request, 'projects/business_application.html')
