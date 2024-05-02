@@ -1,3 +1,8 @@
+body {
+    background: linear-gradient(to bottom, #696851 0%, #534f4f 20%, #574545 40%, #566b57b5 60%, #514867 80%, #754771 100%);
+    color: #fff;
+}
+
 .section {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -7,13 +12,45 @@
     border-radius: 20px;
     box-sizing: border-box;
     clear: both;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f8f8f8;
+    margin-bottom: 80px;
+    transition: color 0.3s ease;
+}
+
+.description {
+    text-align: left;
+    font-size: 2.2rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description p {
+    line-height: 1.6;
+    transition: color 0.3 ease;
+}
+
+.description p:hover, .title:hover{
+    color: rgb(43, 34, 34);
 }
 
 .section img {
-    height: 150px;
-    width: auto;
+    height: 60%;
+    width: 80%;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0 auto 10px;
+}
+
+.section p{
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
 }
 
 .section.description, .section.page, .section.inside-options {
@@ -31,7 +68,7 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #382d2d 0%, #f2f2f2 100%);
+    background: linear-gradient(to right, #3C5B6F 0%, #92b2c8 100%);
 }
 
 .section.description, .section.page, .section.inside-options {
