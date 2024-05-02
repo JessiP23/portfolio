@@ -35,7 +35,7 @@
         <img src="{% static 'business_photo5.png' %}" alt="universe front">
     </div>
     <div class="section buttons">
-        <form action="https://github.com/JessiP23/Universe3d" target="_blank">
+        <form action="https://github.com/JessiP23/business-application" target="_blank">
             <input type="submit" value="Quiz App Code" class="button-render">
         </form>  
         <button id="render-room" class="button-render">My Portfolio</button>
@@ -69,6 +69,10 @@
                     rect.bottom >= 0 && rect.bottom <= viewportHeight * threshold
                 );
             }
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/room";
+            });
         });
     </script>
 </body>

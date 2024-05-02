@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #696851 0%, #534f4f 20%, #574545 40%, #566b57b5 60%, #514867 80%, #754771 100%);
+    background: linear-gradient(to bottom, #696851, #534f4f);
     color: #fff;
 }
 
@@ -26,7 +26,7 @@ body {
 .description {
     text-align: left;
     font-size: 2.2rem;
-    color: #ccc;
+    color: #7e9176;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -34,6 +34,10 @@ body {
 .description p {
     line-height: 1.6;
     transition: color 0.3 ease;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .description p:hover, .title:hover{
@@ -87,4 +91,24 @@ body {
 
 .section.active {
     opacity: 1;
+}
+
+.button-render {
+    background-color: #696851;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 300px;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.button-render:hover {
+    background-color: #534f4f;
 }
