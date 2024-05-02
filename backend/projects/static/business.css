@@ -1,6 +1,51 @@
 .section {
     opacity: 0;
     transition: opacity 0.5s ease;
+    padding: 20px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    clear: both;
+}
+
+.section img {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section.description, .section.page, .section.inside-options {
+    float: left;
+    width: calc(70% - 20px);
+}
+
+.section.home, .section.profile, .section.deals {
+    float: right;
+    width: calc(70% - 20px);
+}
+
+.section.home, .section.profile, .section.deals {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #382d2d 0%, #f2f2f2 100%);
+}
+
+.section.description, .section.page, .section.inside-options {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to left, #297d53 0%, #f2f2f2 100%);
+}
+
+.section::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .section.active {

@@ -34,7 +34,7 @@
         <img src="{% static 'business_photo4.png' %}" alt="universe front">
         <img src="{% static 'business_photo5.png' %}" alt="universe front">
     </div>
-    <div class="buttons">
+    <div class="section buttons">
         <form action="https://github.com/JessiP23/Universe3d" target="_blank">
             <input type="submit" value="Quiz App Code" class="button-render">
         </form>  
@@ -43,6 +43,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var sections = document.querySelectorAll('.section');
+            var buttons = document.querySelector('.section.buttons');
 
             window.addEventListener('scroll', function() {
                 sections.forEach(function(section) {
@@ -50,12 +51,18 @@
                         section.classList.add('active');
                     }
                 });
+                var lastSection = sections[sections.length - 1];
+                if (isInViewport(lastSection)) {
+                    buttons.classList.add('active');
+                } else {
+                    buttons.classList.remove('active');
+                }
             });
 
             function isInViewport(element) {
                 var rect = element.getBoundingClientRect();
                 var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-                var threshold = 0.5; 
+                var threshold = 0.2; 
 
                 return (
                     rect.top >= 0 && rect.top <= viewportHeight * (1 - threshold) ||
