@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'math.css' %}">
+</head> 
+<body> 
+    <h1 class="title">Math Application</h1>
+    <div class="description">
+        <p>This Math application was created by using Django, 
+            Bootstrap, CSS, HTML, JavaScript, Node.js, Express, 
+            Socket.io, and MongoDB. This application teaches 
+            students from all college levels, starting from 
+            Algebra all the way through Differential Equations. 
+            In the application is added a forum section and a
+             schedule class with me for any questions they have
+              in mind. Any person is allowed to create an account 
+              and have a wonderful journey in the math learning 
+              process.</p>
+    </div>
+    <div class="home">
+        <p>Users have the opportunity to create a new account by using their username and password. </p>
+        <img src="{% static 'math1.png' %}" alt="universe front">
+    </div>
+    <div class="first-page">
+        <p>This is the introduction page to the application with carousel images below it.</p>
+        <img src="{% static 'math.png' %}" alt="universe front">
+    </div>
+    <div class="feature">
+        <p>Those are some of the features added to the application such as a forum and a feature where users can schedule sessions in case they are struggling with some topic in specific.</p>
+        <img src="{% static 'math2.png' %}" alt="universe front">
+        <img src="{% static 'math3.png' %}" alt="universe front">
+    </div>
+    <div class="class">
+        <p>This is the class section, in here users can select the class from Basic until Differential Equations, and select the topic they are struggling with. Then, they can see the information in respect to the topic selected by the user.</p>
+        <div class="image-container">
+            <img src="{% static 'math4.png' %}" alt="universe front">
+            <img src="{% static 'math5.png' %}" alt="universe front">
+            <img src="{% static 'math6.png' %}" alt="universe front">
+            <img src="{% static 'math7.png' %}" alt="universe front">
+            <img src="{% static 'math8.png' %}" alt="universe front">
+        </div>
+    </div>
+    <div class="section buttons">
+        <div class="button-container">
+            <form action="https://github.com/JessiP23/deploy-math-app.git" target="_blank">
+                <input type="submit" value="Quiz App Code" class="button-render">
+            </form>  
+            <button id="render-room" class="button-render">My Portfolio</button>
+        </div>
+    </div>  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/room";
+            });
+        });
+    </script>
+</body>
+</html>

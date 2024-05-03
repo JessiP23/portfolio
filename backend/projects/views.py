@@ -20,3 +20,6 @@ def quiz_app(request):
 
 def business_application(request): 
     return render(request, 'projects/business_application.html')
+
+def math(request):
+    return render(request, 'projects/math.html')

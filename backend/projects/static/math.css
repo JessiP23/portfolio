@@ -1,0 +1,111 @@
+body {
+    background-color: #844d4d;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 60px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-align: center;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.home, .first-page, .feature, .class {
+    margin-bottom: 60px;
+}
+
+.description p, .home p, .first-page p, .feature p, .class p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    padding: 15px 30px;
+    color: #333;
+}
+
+.description, .home, .first-page, .feature, .class {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 150px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home:hover, .first-page:hover, .feature:hover, .class:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.title:hover{
+    color: #f8f8f8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.description p:hover {
+    color: #bbbab4;
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+
+/* images styling */
+
+.home img, .first-page img, .feature img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.class img {
+    width: 45%;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.class img:nth-child(odd) {
+    float: left;
+}
+
+.class img:nth-child(even) {
+    float: right;
+}
+
+/*buttons styling*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-container .button-render {
+    margin: 0 10px; 
+    padding: 10px 20px;
+    background-color: #3C5B6F; 
+    color: #fff;
+    height: 70px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .button-render:hover {
+    background-color: #297d53; /* Change button background color on hover */
+}
