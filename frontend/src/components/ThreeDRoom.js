@@ -98,6 +98,7 @@ const ThreeDRoom = () => {
    const paintingTexture3 = paintingLoader.load('./images/myApp1.jpg');
    const paintingTexture4 = paintingLoader.load('./images/business_photo.png');
    const paintingTexture5 = paintingLoader.load('./images/math.png');
+   const paintingTexture6 = paintingLoader.load('./images/stream.png');
 
    //paintings positioned with different textures.
    const painting1 = useMemo(() => {
@@ -142,22 +143,34 @@ const ThreeDRoom = () => {
 
    paintingClickable.push(painting5);
 
+   const painting6 = useMemo(() => {
+    const paintingGeometry6 = new THREE.PlaneGeometry(90,90);
+    const paintingMaterial6 = new THREE.MeshPhongMaterial({ map: paintingTexture6, side: THREE.DoubleSide });
+    return new THREE.Mesh(paintingGeometry6, paintingMaterial6);
+    //link painting5 to app's ingo
+   }, [paintingTexture6]);
+
+   paintingClickable.push(painting6);
+
    painting1.position.set(259, 100, 100);
    painting2.position.set(-259, 100, 100);
    painting3.position.set(-259, 100, -100);
    painting4.position.set(259, 100, -100);
    painting5.position.set(259, -30, 0);
+   painting6.position.set(-259, -30, 0);
    painting1.rotation.y = Math.PI / 2;
    painting2.rotation.y = Math.PI / 2;
    painting3.rotation.y = Math.PI / 2;
    painting4.rotation.y = Math.PI / 2;
    painting5.rotation.y = Math.PI / 2;
+   painting6.rotation.y = Math.PI / 2;
 
    scene.add(painting1);
    scene.add(painting2);
    scene.add(painting3);
    scene.add(painting4);
    scene.add(painting5);
+   scene.add(painting6);
   
    //Reusable window function
    function windowPaintings(scene, width, height, depth, positions){
@@ -196,6 +209,7 @@ const ThreeDRoom = () => {
      {x: -260, y: 100, z: -100, rotation: -Math.PI / 2},
      {x: 290, y: 100, z: -100, rotation: -Math.PI / 2},
      {x: 290, y: -30, z: 0, rotation: -Math.PI / 2},
+     {x: -260, y: -30, z: 0, rotation: -Math.PI /2},
    ];
 
    windowPaintings(scene, windowWidth, windowHeight, windowDepth, windowPositions);
@@ -279,6 +293,9 @@ const ThreeDRoom = () => {
           window.location.href = url;
         } else if (paintingClicked === painting5) {
           const url = BASE_URL + '/math';
+          window.location.href = url;
+        } else if (paintingClicked === painting6) {
+          const url = BASE_URL + '/streamm';
           window.location.href = url;
         }
       };  
