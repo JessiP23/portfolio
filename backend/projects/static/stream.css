@@ -1,0 +1,76 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.description {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.list {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+}
+
+.list p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.viewer {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+}
+
+.viewer p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.description p, .list p, .viewer p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button-container .button-render {
+    margin: 0 10px; 
+    padding: 10px 20px;
+    background-color: #10649c; 
+    color: #fff;
+    height: 70px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .button-render:hover {
+    background-color: #3d55c0; /* Change button background color on hover */
+}

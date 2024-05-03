@@ -1,11 +1,42 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    stream
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'stream.css' %}">
+</head> 
+<body> 
+    <h1 class="title">Stream Application (In Progress)</h1>  
+    <div class="description">
+        <p>This is the stream application, this application is an unique application that will contain unique features enganing users with a more friendly, dynamic, attractive, and unique experience. This has the feature to create stream, add stream into the stream list component, and retrieve the stream into the viewer page.</p>
+        <img src="{% static 'stream.png' %}" alt="Streaming application live stream">
+    </div>
+    <div class="list">
+        <p>This is where all streams are stored, in here we can select any stream we can to see.</p>
+        <img src="{% static 'stream1.png' %}" alt="Streaming application live stream">
+    </div>
+    <div class="viewer">
+        <p>Once a user has selected a stream, it will retrieve the information whether or not the stream is live. If is live will retrieve the stream, if not, it displays a message of message not live.</p>
+        <img src="{% static 'stream2.png' %}" alt="Streaming application live stream">
+    </div>
+    <div class="section buttons">
+        <div class="button-container">
+            <form action="https://github.com/JessiP23/streaming-application.git" target="_blank">
+                <input type="submit" value="Quiz App Code" class="button-render">
+            </form>  
+            <button id="render-room" class="button-render">My Portfolio</button>
+        </div>
+    </div>  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const renderRoom = document.getElementById('render-room');
+            renderRoom.addEventListener('click', () => {
+                window.location.href = "http://localhost:3000/room";
+            });
+        });
+    </script>
 </body>
 </html>
