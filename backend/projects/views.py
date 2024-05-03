@@ -23,3 +23,6 @@ def business_application(request):
 
 def math(request):
     return render(request, 'projects/math.html')
+
+def streamm(request):
+    return render(request, 'projects/streamm.html')
