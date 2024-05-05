@@ -363,6 +363,7 @@ const ThreeDRoom = () => {
     };
   }, [renderer, scene, camera, checkBoundary, paintingClickable, painting1, painting2, painting3, neonBulb]);
 
+  //three-room for only styling page. 
   return( 
     <div className="three-room">
       <div className="myCanvas" ref={canvasRef} tabIndex={0} ></div>
